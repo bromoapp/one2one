@@ -21,4 +21,4 @@ How to play:
   * On the **2nd browser** click **"Goto Callee Page"**,
   * On **Caller Page**, click on **Connect** then **Call**, now you can see the video of your cam also appears in **Callee Page**.
 
-[![Screen Capture](https://github.com/bromoapp/one2one/tree/master/web/static/assets/images/Capture.png?raw=true)]
+<img src="https://cloud.githubusercontent.com/assets/21073705/26759236/d33f9a76-4922-11e7-93da-83a82d23d2d1.PNG" width="15%"></img> 
