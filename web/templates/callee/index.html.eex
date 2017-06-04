@@ -1,0 +1,22 @@
+<h1 id="callee">CALLEE PAGE</h1>
+<div class="row">
+    <div class="col-sm-6 center-panel">
+        <video id="remoteVideo" autoplay></video>
+    </div>
+</div>
+<style>
+video {
+    width: 320px;
+    height: 240px;
+    background-color: black
+}
+
+.center-panel {
+    text-align: center;
+}
+
+.mybtn {
+    width: 100%;
+    margin-bottom: 5px;
+}
+</style>

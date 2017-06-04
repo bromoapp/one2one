@@ -17,6 +17,8 @@ defmodule One2one.Router do
     pipe_through :browser # Use the default browser stack
 
     get "/", PageController, :index
+    get "/caller", CallerController, :index
+    get "/callee", CalleeController, :index
   end
 
   # Other scopes may use custom stacks.
