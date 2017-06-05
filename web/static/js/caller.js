@@ -22,7 +22,7 @@ let caller = {
         channel = socket.channel("room")
         channel.on("message", payload => {
             let origin = payload.origin
-            if (origin != "caller") {
+            if (origin == "callee") {
                 let message = JSON.parse(payload.body)
                 if (message.sdp) {
                     let type = message.sdp.type
@@ -32,6 +32,7 @@ let caller = {
                     }
                 } else {
                     console.log(message)
+                    caller.onRemoteCandidate(message)
                 }
             }
         })
@@ -104,6 +105,15 @@ let caller = {
     setLocalDescription(desc) {
         console.log(">>> RECEIVED ANSWER...")
         peerConnection.setRemoteDescription(new RTCSessionDescription(desc))
-    }
+    },
+    onRemoteCandidate(event) {
+        if (event.candidate) {
+            try {
+                peerConnection.addIceCandidate(new RTCIceCandidate(event.candidate));
+            } catch (err) {
+                console.log(">>> ERR: ", err)
+            }
+        }
+    },
 }
 export default caller
