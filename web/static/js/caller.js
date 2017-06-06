@@ -58,7 +58,7 @@ let caller = {
         navigator.getUserMedia = (navigator.getUserMedia 
             || navigator.webkitGetUserMedia || navigator.mozGetUserMedia 
             || navigator.msGetUserMedia || navigator.oGetUserMedia)
-        navigator.getUserMedia({video: true}, caller.onSucceed, caller.onError)
+        navigator.getUserMedia({video: true, audio: true}, caller.onSucceed, caller.onError)
     },
     call() {
         peerConnection.createOffer(caller.getLocalDescription, caller.onError)
