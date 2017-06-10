@@ -27,7 +27,7 @@ let caller = {
                 if (message.sdp) {
                     let type = message.sdp.type
                     if (type == "answer") {
-                        console.log(">>> RECEIVED ANSWER...")
+                        console.log(">>> RECEIVED ANSWER: ", message.sdp)
                         caller.setLocalDescription(message.sdp)
                     }
                 } else {

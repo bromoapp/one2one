@@ -26,7 +26,7 @@ let callee = {
                 if (message.sdp) {
                     let type = message.sdp.type
                     if (type == "offer") {
-                        console.log(">>> RECEIVED OFFER...")
+                        console.log(">>> RECEIVED OFFER: ", message.sdp)
                         peerConnection = new RTCPeerConnection(servers)
                         peerConnection.onaddstream = callee.onRemoteStream
                         callee.onRemoteDescription(message.sdp)
