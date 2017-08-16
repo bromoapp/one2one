@@ -36,8 +36,8 @@ config :phoenix, :stacktrace_depth, 20
 # Configure your database
 config :one2one, One2one.Repo,
   adapter: Ecto.Adapters.MySQL,
-  username: "root",
-  password: "admin",
+  username: "myapp",
+  password: "something",
   database: "one2one_dev",
   hostname: "localhost",
   pool_size: 10
